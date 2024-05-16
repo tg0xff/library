@@ -24,7 +24,12 @@ function addBookToLibrary() {
 
 function displayBooks() {
   const body = document.querySelector("body");
+  const prevTable = body.querySelector("#books");
+  if (prevTable) {
+    body.removeChild(prevTable);
+  }
   const table = document.createElement("table");
+  table.setAttribute("id", "books");
 
   const thead = document.createElement("thead");
   const theadRow = document.createElement("tr");
