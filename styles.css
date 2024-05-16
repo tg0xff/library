@@ -29,10 +29,15 @@ dialog {
   font-family: inherit;
   font-size: 1.2rem;
   appearance: none;
-  border: 1px solid #000;
+  outline: none;
+  border: 2px solid #000;
   border-radius: 3px;
   padding: 0 3px;
   margin-bottom: 16px;
+}
+
+.text-inputs input:focus {
+  border-color: #4242cc;
 }
 
 .dialog-buttons {
