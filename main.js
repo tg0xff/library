@@ -1,14 +1,14 @@
 const myLibrary = [];
 
 function Book(title, author, pages, read) {
-  self.title = title;
-  self.author = author;
-  self.pages = pages;
-  self.read = read;
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
 }
 
 Book.prototype.info = function () {
-  return `${self.title} by ${self.author}, ${self.pages} pages, ${read ? "Read" : "Not read yet"}`;
+  return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "Read" : "Not read yet"}`;
 };
 
 function addBookToLibrary() {
