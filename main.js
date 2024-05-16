@@ -18,7 +18,7 @@ function addBookToLibrary() {
   let read = prompt("Read: ");
   read = read.toLowerCase();
   read = read === "y";
-  const book = Book(title, author, pages, read);
+  const book = new Book(title, author, pages, read);
   myLibrary.push(book);
 }
 
