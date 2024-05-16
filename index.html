@@ -10,28 +10,30 @@
     <button id="new-book" type="button">NEW BOOK</button>
     <dialog id="book-dialog" open>
       <form>
-        <label for="book-title">Title:</label>
-        <input
-          id="book-title"
-          name="book_title"
-          type="text"
-          placeholder="The Lord of the Rings"
-          autofocus
-        />
-        <label for="book-author">Author: </label>
-        <input
-          id="book-author"
-          name="book_author"
-          type="text"
-          placeholder="J. R. R. Tolkien"
-        />
-        <label for="book-pages">Pages: </label>
-        <input
-          id="book-pages"
-          name="book_pages"
-          type="tel"
-          placeholder="1200"
-        />
+        <div class="text-inputs">
+          <label for="book-title">Title:</label>
+          <input
+            id="book-title"
+            name="book_title"
+            type="text"
+            placeholder="The Lord of the Rings"
+            autofocus
+          />
+          <label for="book-author">Author: </label>
+          <input
+            id="book-author"
+            name="book_author"
+            type="text"
+            placeholder="J. R. R. Tolkien"
+          />
+          <label for="book-pages">Pages: </label>
+          <input
+            id="book-pages"
+            name="book_pages"
+            type="tel"
+            placeholder="1200"
+          />
+        </div>
         <fieldset>
           <legend>Have you read it?</legend>
           <input id="book-read" name="book_read" type="radio" value="y" />
