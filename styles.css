@@ -16,6 +16,23 @@ dialog {
   border-radius: 10px;
 }
 
+.x-button-cont {
+  display: flex;
+  justify-content: end;
+}
+
+.x-button-cont button {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  font-size: 1rem;
+  color: #000;
+  display: grid;
+  place-items: center;
+}
+
 .text-inputs {
   display: flex;
   flex-direction: column;
