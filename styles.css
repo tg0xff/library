@@ -21,6 +21,10 @@ dialog {
   flex-direction: column;
 }
 
+.text-inputs label {
+  margin-bottom: 4px;
+}
+
 .text-inputs input {
   font-family: inherit;
   font-size: 1.2rem;
