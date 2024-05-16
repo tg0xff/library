@@ -40,6 +40,11 @@ dialog {
   border-color: #4242cc;
 }
 
+dialog input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
 .dialog-buttons {
   margin: 18px 0 8px;
   display: flex;
