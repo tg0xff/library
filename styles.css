@@ -29,3 +29,19 @@ dialog {
   padding: 0 3px;
   margin-bottom: 10px;
 }
+
+.dialog-buttons {
+  margin: 18px 0 8px;
+  display: flex;
+  justify-content: end;
+  gap: 12px;
+}
+
+.dialog-buttons button {
+  font-size: 1.1rem;
+  color: #000;
+  background-color: #fff;
+  padding: 6px 18px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
