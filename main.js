@@ -53,24 +53,11 @@ function addBookToLibrary() {
 }
 
 function displayBooks() {
-  const prevTable = tableContainer.querySelector("#books");
+  const table = tableContainer.querySelector("#books");
+  const prevTable = tableContainer.querySelector("#books > tbody");
   if (prevTable) {
     tableContainer.removeChild(prevTable);
   }
-  const table = document.createElement("table");
-  table.setAttribute("id", "books");
-
-  const thead = document.createElement("thead");
-  const theadRow = document.createElement("tr");
-  const tableColumns = ["Title", "Author", "# of pages", "Read"];
-  for (const column of tableColumns) {
-    const th = document.createElement("th");
-    th.setAttribute("scope", "col");
-    th.textContent = column;
-    theadRow.appendChild(th);
-  }
-  thead.appendChild(theadRow);
-  table.appendChild(thead);
 
   const tbody = document.createElement("tbody");
   for (const book of myLibrary) {
