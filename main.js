@@ -39,7 +39,7 @@ Book.prototype.info = function () {
   return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "Read" : "Not read yet"}`;
 };
 
-function addBookToLibrary(title, author, pages, read) {
+function addBookToLibrary() {
   const book = new Book(
     form.elements["book_title"].value,
     form.elements["book_author"].value,
