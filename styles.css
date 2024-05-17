@@ -77,3 +77,12 @@ dialog input[type="checkbox"] {
   border: 1px solid #000;
   border-radius: 5px;
 }
+
+button:hover {
+  background-color: #ccc;
+}
+
+button:active {
+  color: #fff;
+  background-color: #000;
+}
