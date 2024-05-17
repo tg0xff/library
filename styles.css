@@ -11,6 +11,21 @@ body {
   color: #222;
 }
 
+body > div:first-child {
+  margin: 12px 0;
+  display: grid;
+  place-items: center;
+}
+
+.new-book {
+  font-size: 1.3rem;
+  color: #222;
+  background-color: #fff;
+  padding: 8px 18px;
+  border: 1px solid #222;
+  border-radius: 6px;
+}
+
 dialog {
   font-size: 1.2rem;
   border: none;
