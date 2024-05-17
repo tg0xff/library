@@ -2,6 +2,7 @@ const myLibrary = [];
 const body = document.querySelector("body");
 const dialog = body.querySelector("#book-dialog");
 const form = dialog.querySelector("form");
+const tableContainer = body.querySelector(".table-container");
 
 body.addEventListener("click", main);
 
@@ -52,9 +53,9 @@ function addBookToLibrary() {
 }
 
 function displayBooks() {
-  const prevTable = body.querySelector("#books");
+  const prevTable = tableContainer.querySelector("#books");
   if (prevTable) {
-    body.removeChild(prevTable);
+    tableContainer.removeChild(prevTable);
   }
   const table = document.createElement("table");
   table.setAttribute("id", "books");
@@ -83,5 +84,5 @@ function displayBooks() {
     tbody.appendChild(tbodyRow);
   }
   table.appendChild(tbody);
-  body.appendChild(table);
+  tableContainer.appendChild(table);
 }
