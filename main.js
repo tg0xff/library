@@ -18,6 +18,13 @@ function main(e) {
       form.reset();
       dialog.close();
       break;
+    case "add-book":
+      e.preventDefault();
+      addBookToLibrary();
+      form.reset();
+      dialog.close();
+      displayBooks();
+      break;
   }
 }
 
@@ -32,14 +39,13 @@ Book.prototype.info = function () {
   return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "Read" : "Not read yet"}`;
 };
 
-function addBookToLibrary() {
-  const title = prompt("Title: ");
-  const author = prompt("Author: ");
-  const pages = prompt("Pages: ");
-  let read = prompt("Read: ");
-  read = read.toLowerCase();
-  read = read === "y";
-  const book = new Book(title, author, pages, read);
+function addBookToLibrary(title, author, pages, read) {
+  const book = new Book(
+    form.elements["book_title"].value,
+    form.elements["book_author"].value,
+    form.elements["book_pages"].value,
+    form.elements["book_read"].value,
+  );
   myLibrary.push(book);
 }
 
