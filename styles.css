@@ -98,15 +98,6 @@ dialog input[type="checkbox"] {
   border-radius: 5px;
 }
 
-button:hover {
-  background-color: #ccc;
-}
-
-button:active {
-  color: #fff;
-  background-color: #222;
-}
-
 .table-container {
   display: grid;
   place-items: center;
@@ -124,4 +115,28 @@ table th,
 table td {
   border: 1px solid #222;
   padding: 5px 12px;
+}
+
+table th:last-child,
+table td:last-child {
+  border: none;
+}
+
+.remove-book {
+  width: 26px;
+  height: 26px;
+  font-family: inherit;
+  color: #222;
+  background-color: #fff;
+  border: 1px solid #222;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+button:active {
+  color: #fff;
+  background-color: #222;
 }

@@ -67,6 +67,15 @@ function displayBooks() {
       td.textContent = datum;
       tbodyRow.appendChild(td);
     }
+
+    const td = document.createElement("td");
+    const button = document.createElement("button");
+    button.setAttribute("type", "button");
+    button.classList.add("remove-book");
+    button.textContent = "−";
+    td.appendChild(button);
+    tbodyRow.appendChild(td);
+
     tbody.appendChild(tbodyRow);
   }
   table.appendChild(tbody);
