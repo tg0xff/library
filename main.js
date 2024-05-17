@@ -1,5 +1,25 @@
 const myLibrary = [];
 const body = document.querySelector("body");
+const dialog = body.querySelector("#book-dialog");
+const form = dialog.querySelector("form");
+
+body.addEventListener("click", main);
+
+function main(e) {
+  switch (e.target.getAttribute("id")) {
+    case "new-book":
+      dialog.showModal();
+      break;
+    case "x-button":
+      form.reset();
+      dialog.close();
+      break;
+    case "cancel-book":
+      form.reset();
+      dialog.close();
+      break;
+  }
+}
 
 function Book(title, author, pages, read) {
   this.title = title;
