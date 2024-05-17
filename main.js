@@ -2,7 +2,6 @@ const myLibrary = [];
 const body = document.querySelector("body");
 const dialog = body.querySelector("#book-dialog");
 const form = dialog.querySelector("form");
-const tableContainer = body.querySelector(".table-container");
 
 body.addEventListener("click", main);
 
@@ -53,10 +52,10 @@ function addBookToLibrary() {
 }
 
 function displayBooks() {
-  const table = tableContainer.querySelector("#books");
-  const prevTable = tableContainer.querySelector("#books > tbody");
-  if (prevTable) {
-    tableContainer.removeChild(prevTable);
+  const table = body.querySelector("#books");
+  const prevData = table.querySelector("tbody");
+  if (prevData) {
+    table.removeChild(prevData);
   }
 
   const tbody = document.createElement("tbody");
@@ -71,5 +70,4 @@ function displayBooks() {
     tbody.appendChild(tbodyRow);
   }
   table.appendChild(tbody);
-  tableContainer.appendChild(table);
 }
