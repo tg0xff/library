@@ -1,4 +1,5 @@
 const myLibrary = [];
+const body = document.querySelector("body");
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -23,7 +24,6 @@ function addBookToLibrary() {
 }
 
 function displayBooks() {
-  const body = document.querySelector("body");
   const prevTable = body.querySelector("#books");
   if (prevTable) {
     body.removeChild(prevTable);
