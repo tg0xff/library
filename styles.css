@@ -120,6 +120,7 @@ table td {
 table th:last-child,
 table td:last-child {
   border: none;
+  background-color: #fff;
 }
 
 .remove-book {
