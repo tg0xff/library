@@ -75,10 +75,14 @@ function displayBooks() {
   const tbody = document.createElement("tbody");
   for (const book of myLibrary) {
     const tbodyRow = document.createElement("tr");
-    const bookData = Object.values(book);
+    const bookData = Object.keys(book);
     for (const datum of bookData) {
       const td = document.createElement("td");
-      td.textContent = datum;
+      if (datum === "read") {
+        td.textContent = book[datum] === "on" ? "Yes" : "No";
+      } else {
+        td.textContent = book[datum];
+      }
       tbodyRow.appendChild(td);
     }
     tbody.appendChild(tbodyRow);
