@@ -20,10 +20,12 @@ function main(e) {
       break;
     case "add-book":
       e.preventDefault();
-      addBookToLibrary();
-      form.reset();
-      dialog.close();
-      displayBooks();
+      if (form.reportValidity()) {
+        addBookToLibrary();
+        form.reset();
+        dialog.close();
+        displayBooks();
+      }
       break;
   }
 }
