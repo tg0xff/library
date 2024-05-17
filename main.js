@@ -28,6 +28,13 @@ function main(e) {
       }
       break;
   }
+
+  if (e.target.classList.contains("remove-book")) {
+    const tableRow = e.target.parentNode.parentNode;
+    const bookIndex = tableRow.getAttribute("data-book-index");
+    tableRow.parentNode.removeChild(tableRow);
+    myLibrary.splice(bookIndex, 1);
+  }
 }
 
 function Book(title, author, pages, read) {
@@ -59,8 +66,10 @@ function displayBooks() {
   }
 
   const tbody = document.createElement("tbody");
-  for (const book of myLibrary) {
+  for (let i = 0; i < myLibrary.length; i++) {
     const tbodyRow = document.createElement("tr");
+    tbodyRow.setAttribute("data-book-index", i);
+    const book = myLibrary[i];
     const bookData = Object.values(book);
     for (const datum of bookData) {
       const td = document.createElement("td");
