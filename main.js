@@ -47,7 +47,7 @@ function addBookToLibrary() {
     form.elements["book_title"].value,
     form.elements["book_author"].value,
     form.elements["book_pages"].value,
-    form.elements["book_read"].value,
+    form.elements["book_read"].value === "on" ? "Yes" : "No",
   );
   myLibrary.push(book);
 }
@@ -62,14 +62,10 @@ function displayBooks() {
   const tbody = document.createElement("tbody");
   for (const book of myLibrary) {
     const tbodyRow = document.createElement("tr");
-    const bookData = Object.keys(book);
+    const bookData = Object.values(book);
     for (const datum of bookData) {
       const td = document.createElement("td");
-      if (datum === "read") {
-        td.textContent = book[datum] === "on" ? "Yes" : "No";
-      } else {
-        td.textContent = book[datum];
-      }
+      td.textContent = datum;
       tbodyRow.appendChild(td);
     }
     tbody.appendChild(tbodyRow);
