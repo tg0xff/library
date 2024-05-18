@@ -36,11 +36,9 @@ function main(e) {
       } else if (e.target.classList.contains("book-change-read")) {
         const tableRow = e.target.parentNode.parentNode;
         const bookIndex = tableRow.getAttribute("data-book-index");
-        myLibrary[bookIndex].read =
-          myLibrary[bookIndex].read === "Yes" ? "No" : "Yes";
+        myLibrary[bookIndex].changeRead();
         const readStatus = e.target.parentNode.querySelector("span");
-        readStatus.textContent =
-          readStatus.textContent === "Yes" ? "No" : "Yes";
+        readStatus.textContent = myLibrary[bookIndex].read;
       }
       break;
   }
@@ -56,6 +54,10 @@ function Book(title, author, pages, read) {
 Book.prototype.info = function () {
   return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "Read" : "Not read yet"}`;
 };
+
+Book.prototype.changeRead = function () {
+  this.read = this.read === "Yes" ? "No" : "Yes";
+}
 
 function addBookToLibrary() {
   const book = new Book(
