@@ -27,13 +27,14 @@ function main(e) {
         displayBooks();
       }
       break;
-  }
-
-  if (e.target.classList.contains("remove-book")) {
-    const tableRow = e.target.parentNode.parentNode;
-    const bookIndex = tableRow.getAttribute("data-book-index");
-    tableRow.parentNode.removeChild(tableRow);
-    myLibrary.splice(bookIndex, 1);
+    default:
+      if (e.target.classList.contains("remove-book")) {
+        const tableRow = e.target.parentNode.parentNode;
+        const bookIndex = tableRow.getAttribute("data-book-index");
+        tableRow.parentNode.removeChild(tableRow);
+        myLibrary.splice(bookIndex, 1);
+      }
+      break;
   }
 }
 
@@ -73,7 +74,7 @@ function displayBooks() {
     const bookData = Object.values(book);
     for (let j = 0; i < 5; j++) {
       const td = document.createElement("td");
-      if (j === 3)  {
+      if (j === 3) {
         const span = document.createElement("span");
         span.textContent = bookData[j];
         td.appendChild(span);
