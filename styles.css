@@ -11,29 +11,26 @@ body {
   color: #222;
 }
 
-body > div:first-child {
-  margin: 12px 0;
-  display: grid;
-  place-items: center;
-}
-
-.new-book {
-  font-size: 1.3rem;
+button {
+  font-size: 1rem;
   color: #222;
   background-color: #fff;
-  padding: 8px 18px;
   border: 1px solid #222;
   border-radius: 6px;
 }
 
-dialog {
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 10px;
+button:hover {
+  background-color: #ccc;
 }
 
-dialog::backdrop {
-  background: rgb(0, 0, 0, 0.5);
+button:active {
+  color: #fff;
+  background-color: #222;
+}
+
+.new-book {
+  font-size: 1.3rem;
+  padding: 8px 18px;
 }
 
 .x-button-cont {
@@ -44,13 +41,25 @@ dialog::backdrop {
 .x-button-cont button {
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #fff;
-  border: 1px solid #222;
   border-radius: 50%;
-  font-size: 1rem;
-  color: #222;
   display: grid;
   place-items: center;
+}
+
+body > div:first-child {
+  margin: 12px 0;
+  display: grid;
+  place-items: center;
+}
+
+dialog {
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+}
+
+dialog::backdrop {
+  background: rgb(0, 0, 0, 0.5);
 }
 
 .text-inputs {
@@ -131,13 +140,4 @@ table td:last-child {
   background-color: #fff;
   border: 1px solid #222;
   border-radius: 50%;
-}
-
-button:hover {
-  background-color: #ccc;
-}
-
-button:active {
-  color: #fff;
-  background-color: #222;
 }
