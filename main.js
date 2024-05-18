@@ -80,7 +80,7 @@ function displayBooks() {
     tbodyRow.setAttribute("data-book-index", i);
     const book = myLibrary[i];
     const bookData = Object.values(book);
-    for (let j = 0; j < 5; j++) {
+    for (let j = 0; j < 4; j++) {
       const td = document.createElement("td");
       if (j === 3) {
         const span = document.createElement("span");
