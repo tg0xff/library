@@ -52,7 +52,7 @@ function Book(title, author, pages, read) {
 }
 
 Book.prototype.info = function () {
-  return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "Read" : "Not read yet"}`;
+  return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read === "Yes" ? "Read" : "Not read yet"}`;
 };
 
 Book.prototype.changeRead = function () {
