@@ -46,6 +46,10 @@ button:active {
   place-items: center;
 }
 
+.book-change-read {
+  margin-left: 10px;
+}
+
 body > div:first-child {
   margin: 12px 0;
   display: grid;
