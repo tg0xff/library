@@ -33,6 +33,14 @@ function main(e) {
         const bookIndex = tableRow.getAttribute("data-book-index");
         tableRow.parentNode.removeChild(tableRow);
         myLibrary.splice(bookIndex, 1);
+      } else if (e.target.classList.contains("book-change-read")) {
+        const tableRow = e.target.parentNode.parentNode;
+        const bookIndex = tableRow.getAttribute("data-book-index");
+        myLibrary[bookIndex].read =
+          myLibrary[bookIndex].read === "Yes" ? "No" : "Yes";
+        const readStatus = e.target.parentNode.querySelector("span");
+        readStatus.textContent =
+          readStatus.textContent === "Yes" ? "No" : "Yes";
       }
       break;
   }
