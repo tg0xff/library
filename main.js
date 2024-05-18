@@ -35,7 +35,7 @@ function main(e) {
         const bookIndex = tableRow.getAttribute("data-book-index");
         myLibrary[bookIndex].changeRead();
         const readStatus = e.target.parentNode.querySelector("span");
-        readStatus.textContent = myLibrary[bookIndex].read;
+        readStatus.textContent = myLibrary[bookIndex].read ? "Yes" : "No";
       }
       break;
   }
@@ -49,11 +49,11 @@ function Book(title, author, pages, read) {
 }
 
 Book.prototype.info = function () {
-  return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read === "Yes" ? "Read" : "Not read yet"}`;
+  return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "Read" : "Not read yet"}`;
 };
 
 Book.prototype.changeRead = function () {
-  this.read = this.read === "Yes" ? "No" : "Yes";
+  this.read = !this.read;
 }
 
 function addBookToLibrary() {
@@ -61,7 +61,7 @@ function addBookToLibrary() {
     form.elements["book_title"].value,
     form.elements["book_author"].value,
     form.elements["book_pages"].value,
-    form.elements["book_read"].value === "on" ? "Yes" : "No",
+    form.elements["book_read"].value === "on" ? true : false,
   );
   myLibrary.push(book);
 }
@@ -83,7 +83,7 @@ function displayBooks() {
       const td = document.createElement("td");
       if (j === 3) {
         const span = document.createElement("span");
-        span.textContent = bookData[j];
+        span.textContent = bookData[j] ? "Yes" : "No";
         td.appendChild(span);
         const buttonRead = document.createElement("button");
         buttonRead.setAttribute("type", "button");
