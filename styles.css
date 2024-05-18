@@ -135,9 +135,5 @@ table td:last-child {
 .remove-book {
   width: 26px;
   height: 26px;
-  font-family: inherit;
-  color: #222;
-  background-color: #fff;
-  border: 1px solid #222;
   border-radius: 50%;
 }
