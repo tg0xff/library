@@ -71,9 +71,19 @@ function displayBooks() {
     tbodyRow.setAttribute("data-book-index", i);
     const book = myLibrary[i];
     const bookData = Object.values(book);
-    for (const datum of bookData) {
+    for (let j = 0; i < 5; j++) {
       const td = document.createElement("td");
-      td.textContent = datum;
+      if (j === 3)  {
+        const span = document.createElement("span");
+        span.textContent = bookData[j];
+        td.appendChild(span);
+        const buttonRead = document.createElement("button");
+        buttonRead.setAttribute("type", "button");
+        buttonRead.classList.add("book-change-read");
+        td.appendChild(buttonRead);
+      } else {
+        td.textContent = bookData[j];
+      }
       tbodyRow.appendChild(td);
     }
 
