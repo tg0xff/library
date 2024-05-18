@@ -11,9 +11,6 @@ function main(e) {
       dialog.showModal();
       break;
     case "x-button":
-      form.reset();
-      dialog.close();
-      break;
     case "cancel-book":
       form.reset();
       dialog.close();
