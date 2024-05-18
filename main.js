@@ -89,6 +89,7 @@ function displayBooks() {
         const buttonRead = document.createElement("button");
         buttonRead.setAttribute("type", "button");
         buttonRead.classList.add("book-change-read");
+        buttonRead.textContent = "Change";
         td.appendChild(buttonRead);
       } else {
         td.textContent = bookData[j];
